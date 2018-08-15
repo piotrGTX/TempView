@@ -1,16 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from './app.component';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { RootComponent } from "./components/root/root.component";
+import { TempNowComponent } from "./components/temp-now/temp-now.component";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [RootComponent, TempNowComponent],
+  imports: [BrowserModule, NgbModule.forRoot()],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [RootComponent]
 })
-export class AppModule { }
+export class AppModule {}
